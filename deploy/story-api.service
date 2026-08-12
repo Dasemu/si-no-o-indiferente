@@ -1,0 +1,22 @@
+[Unit]
+Description=API de Historias Incompletas
+After=network.target
+
+[Service]
+Type=simple
+User=historias
+Group=historias
+WorkingDirectory=/opt/historias/backend
+EnvironmentFile=/opt/historias/backend/.env
+ExecStart=/usr/bin/node /opt/historias/backend/dist/index.js
+Restart=on-failure
+RestartSec=5
+# Endurecimiento basico del sandbox systemd
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/historias/backend/data
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

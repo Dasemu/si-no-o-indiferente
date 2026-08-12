@@ -1,0 +1,12 @@
+[Unit]
+Description=Genera 5 historias nuevas del dia con Gemini
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=historias
+Group=historias
+WorkingDirectory=/opt/historias/backend
+EnvironmentFile=/opt/historias/backend/.env
+ExecStart=/usr/bin/node /opt/historias/backend/dist/scripts/generateDaily.js

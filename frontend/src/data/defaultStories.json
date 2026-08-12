@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "source": "default",
+  "stories": [
+    {
+      "id": "faro-apagado",
+      "title": "El faro apagado",
+      "difficulty": "medium",
+      "tags": ["misterio", "costa"],
+      "teaser": "Un farero apaga su faro a propósito una noche de tormenta. A la mañana siguiente lo arrestan. ¿Por qué?",
+      "hints": [
+        "El faro seguía funcionando perfectamente; nadie lo dañó.",
+        "Esa noche pasó un barco que no debía ser visto por nadie más.",
+        "El farero no ganó dinero por lo que hizo, y volvería a hacerlo."
+      ],
+      "solution": "El faro marcaba la frontera marítima entre dos países en conflicto. Esa noche, un pequeño bote cruzaba la zona llevando a la hermana del farero, que huía de una zona de guerra. Si la luz del faro la iluminaba, la patrulla fronteriza la detectaría. El farero apagó la luz el tiempo justo para que el bote pasara sin ser visto. La patrulla, extrañada por la oscuridad repentina, investigó y descubrió que el apagado había sido intencional; lo arrestaron por poner en riesgo la navegación, sin saber jamás el verdadero motivo."
+    },
+    {
+      "id": "foto-sin-rostro",
+      "title": "La foto sin rostro",
+      "difficulty": "easy",
+      "tags": ["familia", "objetos"],
+      "teaser": "Una mujer guarda con cariño una fotografía en la que no se ve ningún rostro. Aun así, es su recuerdo más preciado.",
+      "hints": [
+        "La foto no está dañada ni borrosa.",
+        "En la foto sí hay personas.",
+        "La cámara la sostenía alguien muy importante para ella, por primera vez."
+      ],
+      "solution": "La fotografía muestra la espalda de la mujer y de su pareja, tomados de la mano, mirando hacia un atardecer. La tomó su hijo de cuatro años, sosteniendo la cámara por primera vez en su vida, apuntando mal a propósito porque quería que sus padres 'miraran el sol y no a él'. Fue el primer regalo que el niño hizo sin ayuda de nadie, y por eso, aunque no se vea ningún rostro, es la foto más valiosa que tiene."
+    },
+    {
+      "id": "pianista-silencioso",
+      "title": "El pianista silencioso",
+      "difficulty": "medium",
+      "tags": ["música", "teatro"],
+      "teaser": "Un pianista se sienta frente al público, coloca las manos sobre el teclado y no toca ni una sola nota durante cuatro minutos y medio. El público aplaude de pie al final.",
+      "hints": [
+        "El piano funciona perfectamente.",
+        "El pianista no olvidó la partitura ni está enfermo.",
+        "El silencio era, en sí mismo, la obra."
+      ],
+      "solution": "El pianista estaba interpretando una pieza compuesta deliberadamente en silencio, pensada para que el público prestara atención a los sonidos del propio teatro: la respiración de la gente, una tos lejana, el crujido de una butaca. La obra buscaba demostrar que no existe el silencio absoluto y que el ambiente mismo puede ser música. El público, que conocía la naturaleza de la pieza, aplaudió al reconocer haber 'escuchado' algo real."
+    },
+    {
+      "id": "regalo-repetido",
+      "title": "El regalo repetido",
+      "difficulty": "easy",
+      "tags": ["tradiciones", "familia"],
+      "teaser": "Cada año, un hombre recibe de su abuela el mismo regalo exacto: un par de calcetines de lana gris. Él los agradece siempre con lágrimas en los ojos.",
+      "hints": [
+        "No es que a la abuela se le olvide lo que ya regaló.",
+        "El valor no está en el objeto en sí, sino en quién los teje.",
+        "La abuela dejó de poder ver hace varios años."
+      ],
+      "solution": "La abuela quedó ciega hace años, pero se niega a dejar de tejer para su nieto. Cada par de calcetines lo hace de memoria, guiándose solo por el tacto, y tarda meses en terminarlo. El nieto llora no por los calcetines, sino porque sabe cuánto esfuerzo y amor representa cada puntada hecha a ciegas, y porque cada par podría ser, sin que nadie lo diga en voz alta, el último."
+    },
+    {
+      "id": "maraton-interrumpida",
+      "title": "La maratón interrumpida",
+      "difficulty": "hard",
+      "tags": ["deporte", "decisiones"],
+      "teaser": "Una corredora va en primer lugar, a pocos metros de ganar su primera maratón, y se detiene en seco para ayudar a otra corredora desconocida. Pierde la carrera a propósito.",
+      "hints": [
+        "La otra corredora no era una rival cercana en la clasificación.",
+        "No hubo ninguna lesión grave de por medio.",
+        "Algo que la otra corredora llevaba consigo era más importante que la medalla."
+      ],
+      "solution": "La corredora desconocida llevaba, prendido en la ropa, un pequeño cartel con la foto de su hijo desaparecido y un número de contacto, como hacen algunos atletas para dar visibilidad a causas personales durante eventos masivos. A pocos metros de la meta, esa corredora se desplomó por la deshidratación y el cartel cayó lejos de su alcance. La líder, reconociendo la foto porque la había visto en las noticias esa misma semana, se detuvo para recogerlo y colocarlo de nuevo junto a ella antes de que las cámaras de la transmisión pasaran por ahí, sabiendo que esa visibilidad valía más que cualquier medalla."
+    },
+    {
+      "id": "paraguas-seco",
+      "title": "El paraguas seco",
+      "difficulty": "medium",
+      "tags": ["lluvia", "cotidiano"],
+      "teaser": "Un hombre camina bajo la lluvia con un paraguas abierto, pero deja que se moje por completo. El paraguas permanece seco por dentro y por fuera solo en el mango.",
+      "hints": [
+        "El paraguas funciona correctamente y no tiene agujeros.",
+        "El hombre no está probando el paraguas ni jugando.",
+        "Alguien muy pequeño va debajo de él, no el hombre."
+      ],
+      "solution": "El hombre lleva a su hija recién nacida en un portabebés pegado al pecho, cubierta bajo su propio abrigo, y sostiene el paraguas inclinado completamente hacia adelante y hacia abajo para proteger a la bebé del viento y la lluvia, dejando que él mismo reciba toda el agua. El único punto seco del paraguas es el mango, que él sostiene con la mano."
+    },
+    {
+      "id": "correo-sin-remitente",
+      "title": "El correo sin remitente",
+      "difficulty": "hard",
+      "tags": ["cartas", "pasado"],
+      "teaser": "Durante quince años, una mujer recibe una carta anónima el mismo día cada año, sin remitente ni pistas. Al enterarse de que las cartas se detuvieron, se pone feliz en lugar de triste.",
+      "hints": [
+        "Las cartas nunca contenían amenazas ni nada negativo.",
+        "El remitente tenía una razón para no poder firmarlas.",
+        "Que las cartas se detuvieran era, en realidad, la señal que ella esperaba."
+      ],
+      "solution": "Las cartas las escribía su hermano, que ingresó a un programa de protección de testigos tras declarar contra una organización criminal y no podía tener ningún contacto directo con su familia. Cada año, en la fecha del cumpleaños de ella, arriesgaba enviar una carta sin firma a través de un intermediario solo para hacerle saber que seguía con vida. Cuando las cartas se detuvieron, ella entendió —por una señal acordada de antemano con las autoridades años atrás— que significaba que el peligro finalmente había terminado y que pronto podrían reencontrarse."
+    },
+    {
+      "id": "receta-incompleta",
+      "title": "La receta incompleta",
+      "difficulty": "easy",
+      "tags": ["cocina", "legado"],
+      "teaser": "Una chef muy famosa se niega a completar por escrito la receta de su platillo más famoso, aunque se lo pidan editoriales de todo el mundo pagando fortunas.",
+      "hints": [
+        "No es por proteger el negocio ni por dinero.",
+        "La receta sí se puede aprender, pero de una sola manera.",
+        "Ella también la aprendió así, de otra persona, sin papel de por medio."
+      ],
+      "solution": "La receta se la enseñó su madre cocinando juntas, corrigiendo cada paso con las manos, el olfato y la mirada, sin usar jamás una medida exacta. La chef considera que poner la receta en papel destruiría lo que la hace especial: que solo se puede transmitir de persona a persona, cocinando codo a codo, tal como ella la aprendió. Por eso solo la enseña en persona, a quien esté dispuesto a sentarse con ella en la cocina."
+    },
+    {
+      "id": "reloj-parado",
+      "title": "El reloj parado",
+      "difficulty": "medium",
+      "tags": ["objetos", "duelo"],
+      "teaser": "En la sala de un hombre hay un reloj de pared detenido exactamente a las 3:17. Se niega a repararlo o a cambiarle la pila, aunque funciona perfectamente bien.",
+      "hints": [
+        "El reloj no está roto por dentro.",
+        "Esa hora marca algo que ya pasó, no algo que vaya a pasar.",
+        "Alguien se detuvo a esa hora, no el reloj."
+      ],
+      "solution": "A las 3:17 de la tarde de un día específico, el hombre recibió la llamada que le avisaba que su esposa había fallecido en un accidente. Ese reloj estaba en la habitación cuando colgó el teléfono, y desde entonces decidió detenerlo en esa hora exacta como un pequeño monumento privado, un recordatorio silencioso que solo él entiende cada vez que entra a esa sala."
+    },
+    {
+      "id": "anillo-en-el-pan",
+      "title": "El anillo en el pan",
+      "difficulty": "hard",
+      "tags": ["panadería", "secretos"],
+      "teaser": "Cada mañana, un panadero esconde un anillo distinto dentro de una sola hogaza de pan, entre cientos que hornea. Nunca revela cuál es la hogaza elegida, ni cobra más por ella.",
+      "hints": [
+        "No busca ganar dinero ni publicidad con esto.",
+        "No sabe quién comprará esa hogaza en particular.",
+        "Alguna vez, hace mucho, alguien hizo lo mismo por él, sin saberlo tampoco."
+      ],
+      "solution": "Cuando era joven y atravesaba una situación económica muy difícil, compró una hogaza de pan cualquiera y encontró dentro un anillo de oro que le permitió salir adelante durante meses. Nunca supo quién lo había puesto ahí ni por qué, y desde entonces decidió replicar ese gesto anónimo cada día de su vida, con la esperanza de que, alguna vez, la persona correcta encuentre esa hogaza en el momento en que más lo necesite, tal como le pasó a él."
+    },
+    {
+      "id": "ultima-llamada",
+      "title": "La última llamada",
+      "difficulty": "medium",
+      "tags": ["tecnología", "familia"],
+      "teaser": "Un hombre paga cada mes una costosa línea telefónica que no usa para hablar con nadie. Solo la mantiene activa para poder escuchar un mensaje.",
+      "hints": [
+        "El mensaje no es suyo.",
+        "No puede guardar ese audio en ningún otro lugar.",
+        "La persona que dejó el mensaje ya no puede dejar otro."
+      ],
+      "solution": "En ese número quedó grabado, en el buzón de voz, el último mensaje que le dejó su padre antes de morir repentinamente. Por razones técnicas del proveedor, el mensaje no se puede descargar ni transferir a otro dispositivo sin perderse: solo existe mientras la línea permanezca activa. Por eso paga la mensualidad cada mes, únicamente para poder marcar ese número de vez en cuando y volver a escuchar, por unos segundos, la voz de su padre."
+    },
+    {
+      "id": "espejo-cubierto",
+      "title": "El espejo cubierto",
+      "difficulty": "easy",
+      "tags": ["hogar", "costumbres"],
+      "teaser": "En una casa, cubren con una tela todos los espejos durante exactamente siete días. Nadie en la familia se queja ni pregunta por qué.",
+      "hints": [
+        "No es por decoración ni por limpieza.",
+        "Es una costumbre que se repite desde hace generaciones.",
+        "Está relacionada con honrar a alguien que ya no está."
+      ],
+      "solution": "La familia sigue una tradición de duelo, similar a costumbres reales de distintas culturas, en la que se cubren los espejos durante los primeros siete días tras la muerte de un familiar cercano, como símbolo de que en ese período el foco no debe estar en la propia imagen ni en la vanidad, sino en recordar y acompañar a quien se fue. Nadie pregunta porque todos en la familia crecieron con esa misma costumbre."
+    },
+    {
+      "id": "bote-vacio",
+      "title": "El bote vacío",
+      "difficulty": "hard",
+      "tags": ["mar", "rescate"],
+      "teaser": "Un pescador encuentra un bote a la deriva, completamente vacío, y en lugar de remolcarlo a la orilla, lo hunde él mismo en altamar.",
+      "hints": [
+        "El bote no estaba dañado ni era peligroso para la navegación.",
+        "No lo hundió por accidente ni por rabia.",
+        "Alguien necesitaba, con urgencia, que ese bote nunca fuera encontrado."
+      ],
+      "solution": "El bote pertenecía a un amigo suyo que había fingido su propia desaparición en el mar para escapar de deudas y amenazas graves, y ya se encontraba a salvo en tierra, con una nueva identidad, gracias a la ayuda del pescador. Si el bote vacío era hallado y remolcado a la costa, reabriría la investigación y pondría en riesgo el plan; hundiéndolo en aguas profundas, el pescador aseguraba que la historia de la desaparición se diera por cerrada para siempre."
+    },
+    {
+      "id": "partida-de-ajedrez",
+      "title": "La partida de ajedrez",
+      "difficulty": "medium",
+      "tags": ["juegos", "amistad"],
+      "teaser": "Dos ancianos juegan ajedrez en el mismo parque todos los días desde hace veinte años. Ninguno de los dos mueve jamás una sola pieza.",
+      "hints": [
+        "El tablero y las piezas están en perfectas condiciones.",
+        "No es que se hayan olvidado de cómo jugar.",
+        "Lo importante de esas tardes nunca fue ganar la partida."
+      ],
+      "solution": "Los dos hombres se conocieron hace veinte años, cada uno recién viudo y sin nadie más con quien hablar, y desde entonces se reúnen cada tarde con el tablero como excusa. Ambos saben, sin decirlo, que ninguno tiene verdadero interés en jugar: el tablero es simplemente el pretexto que les permite sentarse juntos, en silencio o conversando, sin que resulte extraño para dos hombres de su generación admitir que solo se necesitan compañía."
+    },
+    {
+      "id": "testigo-ciego",
+      "title": "El testigo ciego",
+      "difficulty": "hard",
+      "tags": ["misterio", "justicia"],
+      "teaser": "En un juicio, la única testigo que puede identificar al culpable es ciega de nacimiento. Su testimonio es el que finalmente resuelve el caso.",
+      "hints": [
+        "Ella no vio nada con los ojos, pero sí percibió algo clave.",
+        "Su testimonio no habla de rostros ni de ropa.",
+        "Confiaron en uno de sus sentidos más entrenados."
+      ],
+      "solution": "La testigo, al ser ciega desde su nacimiento, había desarrollado un oído extraordinariamente entrenado. Esa noche escuchó una discusión desde su departamento y pudo reconocer, con total seguridad, la voz y el particular tintineo de las llaves de quien discutía, un sonido que había memorizado por haberlo escuchado repetidas veces por ser vecino del edificio. Su testimonio auditivo, corroborado con otras pruebas, fue lo que permitió identificar al culpable, sin haber 'visto' nada en el sentido convencional."
+    },
+    {
+      "id": "cancion-prohibida",
+      "title": "La canción prohibida",
+      "difficulty": "medium",
+      "tags": ["música", "trabajo"],
+      "teaser": "En una radio local, un locutor tiene terminantemente prohibido volver a poner una canción específica al aire. La prohibición no viene de la dirección de la emisora, sino de él mismo.",
+      "hints": [
+        "La canción no tiene ningún problema legal ni de derechos.",
+        "Es una canción que en algún momento le gustaba mucho.",
+        "La última vez que la puso al aire, algo cambió para siempre."
+      ],
+      "solution": "Esa era la canción que sonaba en su auto la noche del accidente en el que perdió a su esposa, mientras conducían juntos hacia su casa. Volver a escucharla, incluso brevemente al ponerla al aire, le provoca un dolor tan intenso que decidió, por su propia salud, prohibirse a sí mismo programarla jamás de nuevo, y se lo pidió también a sus compañeros de la radio."
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+:root {
+  --bg: #14101c;
+  --bg-elevated: #1e1830;
+  --bg-card: #241d3a;
+  --text: #ede9f7;
+  --text-dim: #b3a9cc;
+  --accent: #b98cff;
+  --accent-strong: #d6b8ff;
+  --danger: #ff6b6b;
+  --danger-strong: #ff8f8f;
+  --border: #3a3155;
+  --easy: #6bcf9c;
+  --medium: #e8c15a;
+  --hard: #ff8080;
+
+  color-scheme: dark;
+  font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #241d3a 0%, #14101c 60%);
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 3rem;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--accent-strong);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--text-dim);
+  margin-top: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0.85rem 1.1rem;
+  background: var(--bg-elevated);
+  color: var(--text);
+  width: 100%;
+  margin-top: 0.6rem;
+  transition: transform 0.05s ease, background 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #1a1225;
+  font-weight: 600;
+  border: none;
+}
+
+button.ghost {
+  background: transparent;
+}
+
+button.danger {
+  background: var(--danger);
+  color: #2a0f0f;
+  font-weight: 600;
+  border: none;
+}
+
+.rules-card,
+.teaser-card,
+.hints-card,
+.solution-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+}
+
+.rules-card ol {
+  padding-left: 1.1rem;
+  margin: 0.5rem 0 0;
+}
+
+.status-row {
+  margin: 0.75rem 0;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.picker-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.picker-header button {
+  width: auto;
+  margin-top: 0;
+}
+
+.picker-header h2 {
+  margin: 0;
+}
+
+.picker-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.picker-controls .primary {
+  flex: 1;
+  margin-top: 0;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.story-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.story-card {
+  text-align: left;
+  margin-top: 0;
+  background: var(--bg-card);
+  position: relative;
+}
+
+.story-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.story-title {
+  font-weight: 600;
+}
+
+.difficulty {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: #14101c;
+}
+
+.difficulty-easy {
+  background: var(--easy);
+}
+
+.difficulty-medium {
+  background: var(--medium);
+}
+
+.difficulty-hard {
+  background: var(--hard);
+}
+
+.tags {
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.used-flag {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--danger-strong);
+}
+
+.empty {
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.narrator-warning {
+  background: var(--danger);
+  color: #2a0f0f;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.confirm-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.solution-area {
+  margin: 1rem 0;
+}
