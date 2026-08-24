@@ -1,5 +1,5 @@
 [Unit]
-Description=Genera 5 historias nuevas del dia con Gemini
+Description=Generates 5 new stories for the day with Gemini
 After=network-online.target
 Wants=network-online.target
 

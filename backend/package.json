@@ -12,7 +12,9 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "generate": "tsx src/scripts/generateDaily.ts",
-    "generate:built": "node dist/scripts/generateDaily.js"
+    "generate:built": "node dist/scripts/generateDaily.js",
+    "reclassify": "tsx src/scripts/reclassifyDifficulty.ts",
+    "reclassify:built": "node dist/scripts/reclassifyDifficulty.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -1,5 +1,5 @@
 [Unit]
-Description=Dispara la generacion diaria de historias (story-generate.service)
+Description=Triggers the daily story generation (story-generate.service)
 
 [Timer]
 OnCalendar=*-*-* 06:00:00

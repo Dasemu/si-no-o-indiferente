@@ -1,17 +1,17 @@
-# Ejemplo de virtual host para nginx en el LXC de Debian.
-# Sirve el frontend (build estatica de Vite) y reversa-proxea /api al backend
-# Node que corre en localhost:8787 via el servicio systemd story-api.
+# Example nginx virtual host for the Debian LXC.
+# Serves the frontend (static Vite build) and reverse-proxies /api to the
+# Node backend running on localhost:8787 via the story-api systemd service.
 #
-# Copialo a /etc/nginx/sites-available/historias, ajusta el dominio y la ruta,
-# y despues:
+# Copy it to /etc/nginx/sites-available/historias, adjust the domain and
+# path, then:
 #   ln -s /etc/nginx/sites-available/historias /etc/nginx/sites-enabled/historias
 #   nginx -t && systemctl reload nginx
-# Para TLS con Let's Encrypt: certbot --nginx -d tu-dominio.com
+# For TLS with Let's Encrypt: certbot --nginx -d your-domain.example
 
 server {
     listen 80;
     listen [::]:80;
-    server_name tu-dominio.com;
+    server_name your-domain.example;
 
     root /opt/historias/frontend/dist;
     index index.html;

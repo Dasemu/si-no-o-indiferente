@@ -1,0 +1,11 @@
+[Unit]
+Description=Reclassifies story difficulty from player ratings
+After=network.target
+
+[Service]
+Type=oneshot
+User=historias
+Group=historias
+WorkingDirectory=/opt/historias/backend
+EnvironmentFile=/opt/historias/backend/.env
+ExecStart=/usr/bin/node /opt/historias/backend/dist/scripts/reclassifyDifficulty.js

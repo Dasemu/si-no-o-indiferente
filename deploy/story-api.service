@@ -1,5 +1,5 @@
 [Unit]
-Description=API de Historias Incompletas
+Description=Sí, no, o indiferente API
 After=network.target
 
 [Service]
@@ -11,7 +11,7 @@ EnvironmentFile=/opt/historias/backend/.env
 ExecStart=/usr/bin/node /opt/historias/backend/dist/index.js
 Restart=on-failure
 RestartSec=5
-# Endurecimiento basico del sandbox systemd
+# Basic systemd sandbox hardening
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true

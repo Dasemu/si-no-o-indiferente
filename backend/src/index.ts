@@ -15,5 +15,5 @@ app.get("/api/health", (_req, res) => {
 app.use("/api", storiesRouter);
 
 app.listen(config.port, () => {
-  console.log(`API de historias escuchando en http://localhost:${config.port}`);
+  console.log(`Stories API listening on http://localhost:${config.port}`);
 });

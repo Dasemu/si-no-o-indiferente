@@ -1,39 +1,51 @@
-# Backend — Historias Incompletas
+# Backend — Sí, no, o indiferente
 
-API en Node/Express (TypeScript) que sirve el mazo de historias "actualizado"
-y lo regenera una vez al día llamando a la API de Gemini.
+Node/Express (TypeScript) API that serves the "updated" story deck and
+regenerates it once a day by calling the Gemini API.
 
 ## Endpoints
 
-- `GET /api/health` — chequeo de salud.
-- `GET /api/stories` — último lote de historias generado. `204` si todavía
-  no se generó ninguno (el cliente debe usar su set default en ese caso).
-- `POST /api/admin/generate` — dispara una generación manual con Gemini.
-  Requiere header `x-admin-token` igual a `ADMIN_TOKEN`.
+- `GET /api/health` — health check.
+- `GET /api/stories` — latest generated story batch. `204` if none has been
+  generated yet (the client should fall back to its default set in that
+  case).
+- `POST /api/admin/generate` — triggers a manual generation with Gemini.
+  Requires an `x-admin-token` header matching `ADMIN_TOKEN`.
+- `POST /api/stories/:id/ratings` — records a player's voluntary 1-5
+  difficulty rating for a story (`{ "rating": 1-5 }` body). Open endpoint,
+  no auth required. Works for any story id, including ones from the
+  frontend's embedded default set.
 
-## Desarrollo
+## Development
 
 ```bash
 npm install
-cp .env.example .env   # completa GEMINI_API_KEY y ADMIN_TOKEN
+cp .env.example .env   # fill in GEMINI_API_KEY and ADMIN_TOKEN
 npm run dev             # http://localhost:8787
-npm run generate        # genera un lote nuevo a mano (llama a Gemini de verdad)
+npm run generate        # generates a new batch by hand (calls Gemini for real)
+npm run reclassify      # reclassifies difficulty from collected ratings by hand
 ```
 
-## Producción
+## Production
 
 ```bash
 npm run build
-npm start                 # corre dist/index.js
-npm run generate:built    # corre dist/scripts/generateDaily.js (lo usa el systemd timer)
+npm start                   # runs dist/index.js
+npm run generate:built      # runs dist/scripts/generateDaily.js (used by the systemd timer)
+npm run reclassify:built    # runs dist/scripts/reclassifyDifficulty.js (used by the systemd timer)
 ```
 
-Ver [`../docs/DEPLOY.md`](../docs/DEPLOY.md) para el setup completo con
-systemd + nginx en un LXC de Debian.
+See the example unit files in `../deploy/` for the systemd + nginx setup.
 
-## Almacenamiento
+## Storage
 
-Las historias generadas se guardan como JSON plano en `data/` (configurable
-con `DATA_DIR`): un archivo por día (`YYYY-MM-DD.json`) y `latest.json`, que
-es lo que sirve `GET /api/stories`. No hay base de datos — a este volumen
-(5 historias/día) un archivo JSON con escritura atómica alcanza y sobra.
+Generated stories are stored as plain JSON files in `data/` (configurable
+via `DATA_DIR`): one file per day (`YYYY-MM-DD.json`) plus `latest.json`,
+which is what `GET /api/stories` serves. There's no database — at this
+volume (5 stories/day) a JSON file with atomic writes is more than enough.
+
+Player difficulty ratings are appended to `data/ratings.json` as they come
+in. The `reclassifyDifficulty` script (run periodically via
+`story-reclassify.timer`) averages the ratings for each story and, once a
+story has at least `MIN_RATINGS_FOR_RECLASSIFICATION` votes, updates its
+difficulty band in `latest.json` if the average points to a different one.
