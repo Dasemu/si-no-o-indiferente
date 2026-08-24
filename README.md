@@ -1,40 +1,39 @@
-# Historias Incompletas
+# Sí, no, o indiferente
 
-Juego de historias de pensamiento lateral (estilo "cuenta un enigma, el resto
-adivina la explicación completa haciendo preguntas de sí/no") para 2 o más
-jugadores compartiendo un mismo dispositivo. Web + APK (Capacitor).
+A lateral-thinking story game (in the style of "tell a puzzle, everyone else
+guesses the full explanation by asking yes/no questions") for 2 or more
+players sharing a single device. Web + APK (Capacitor).
 
-- Un jugador narra: elige una historia, lee en voz alta el enigma, y
-  responde preguntas de sí/no del resto del grupo hasta que adivinan (o se
-  rinden) la solución completa.
-- La app trae un mazo de historias por defecto embebido, y además intenta
-  bajar un mazo "actualizado" desde un backend propio que genera 5 historias
-  nuevas por día con la API de Gemini. Si no hay conexión o el backend no
-  tiene nada disponible, se usa el mazo default.
+- One player narrates: they pick a story, read the puzzle aloud, and answer
+  yes/no questions from the rest of the group until they guess (or give up
+  on) the full solution.
+- The app ships with a default deck of stories embedded, and also tries to
+  download an "updated" deck from its own backend, which generates 5 new
+  stories a day using the Gemini API. If there's no connection or the
+  backend has nothing available, the default deck is used.
 
-## Estructura del repo
+## Repo structure
 
 ```
-backend/    API en Node/Express que sirve /api/stories y genera historias
-            nuevas con Gemini (backend/README.md)
-frontend/   App React + Vite, empaquetable como APK con Capacitor
+backend/    Node/Express API that serves /api/stories and generates new
+            stories with Gemini (backend/README.md)
+frontend/   React + Vite app, packageable as an Android APK with Capacitor
             (frontend/README.md)
-deploy/     Unidades systemd + config de nginx de ejemplo para producción
-docs/       Guía de deploy paso a paso (docs/DEPLOY.md)
+deploy/     Example systemd units + nginx config for production
 ```
 
-## Desarrollo local
+## Local development
 
 ### Backend
 
 ```bash
 cd backend
 npm install
-cp .env.example .env   # completa GEMINI_API_KEY y ADMIN_TOKEN
+cp .env.example .env   # fill in GEMINI_API_KEY and ADMIN_TOKEN
 npm run dev             # http://localhost:8787
 ```
 
-Generar historias manualmente (usa tu GEMINI_API_KEY real):
+Generate stories manually (uses your real GEMINI_API_KEY):
 
 ```bash
 npm run generate
@@ -45,43 +44,41 @@ npm run generate
 ```bash
 cd frontend
 npm install
-cp .env.example .env   # VITE_API_URL=http://localhost:8787 en dev
+cp .env.example .env   # VITE_API_URL=http://localhost:8787 in dev
 npm run dev             # http://localhost:5173
 ```
 
-### Frontend (APK con Capacitor)
+### Frontend (APK with Capacitor)
 
-Requiere Android Studio / Android SDK + JDK 17 instalados en tu máquina de
-desarrollo (esto no se puede generar en este entorno). Una vez instalados:
+Requires Android Studio / Android SDK + JDK 17 installed on your development
+machine (this can't be generated in this environment). Once installed:
 
 ```bash
 cd frontend
-npm run cap:sync    # build web + copia assets a android/
-npm run android:open  # abre el proyecto en Android Studio para compilar/firmar el APK
+npm run cap:sync    # builds the web app + copies assets into android/
+npm run android:open  # opens the project in Android Studio to build/sign the APK
 ```
 
-También podés compilar por línea de comandos una vez que tengas el SDK:
+You can also build it from the command line once you have the SDK:
 
 ```bash
 cd frontend/android
 ./gradlew assembleDebug
-# APK en frontend/android/app/build/outputs/apk/debug/
+# APK at frontend/android/app/build/outputs/apk/debug/
 ```
 
-## Contenido por defecto
+## Default content
 
-`frontend/src/data/defaultStories.json` tiene 16 historias originales
-escritas para este proyecto (no extraídas de ningún juego comercial de
-terceros), usadas como fallback cuando no hay conexión al backend o todavía
-no se generó ningún lote.
+`frontend/src/data/defaultStories.json` has 16 original stories written for
+this project (not extracted from any third-party commercial game), used as
+a fallback when there's no connection to the backend or no batch has been
+generated yet.
 
-## Producción
+## Production
 
-Ver [`docs/DEPLOY.md`](docs/DEPLOY.md) para el paso a paso de deploy en un
-LXC de Debian sin Docker, con systemd + nginx + certbot, apuntando a tu
-propio dominio.
+Example systemd/nginx configs live in the `deploy/` folder.
 
-## API key de Gemini
+## Gemini API key
 
-Conseguila en https://aistudio.google.com/apikey y ponela en
-`backend/.env` como `GEMINI_API_KEY`.
+Get one at https://aistudio.google.com/apikey and put it in `backend/.env`
+as `GEMINI_API_KEY`.
