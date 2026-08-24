@@ -2,7 +2,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
   appId: "com.historiasincompletas.app",
-  appName: "Historias Incompletas",
+  appName: "Sí, no, o indiferente",
   webDir: "dist",
   backgroundColor: "#14101c",
   android: {

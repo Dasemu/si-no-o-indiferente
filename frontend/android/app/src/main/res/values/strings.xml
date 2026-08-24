@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Historias Incompletas</string>
-    <string name="title_activity_main">Historias Incompletas</string>
+    <string name="app_name">Sí, no, o indiferente</string>
+    <string name="title_activity_main">Sí, no, o indiferente</string>
     <string name="package_name">com.historiasincompletas.app</string>
     <string name="custom_url_scheme">com.historiasincompletas.app</string>
 </resources>

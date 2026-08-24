@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { loadStories } from "./api";
+import { loadStories, submitRating } from "./api";
 import Home from "./screens/Home";
 import NarratorView from "./screens/NarratorView";
+import RateStory from "./screens/RateStory";
 import StoryPicker from "./screens/StoryPicker";
 import { getUsedStoryIds, markStoryUsed, resetUsedStories } from "./state/gameStorage";
 import type { Story, StoryList } from "./types";
 
-type Screen = "home" | "picker" | "narrator";
+type Screen = "home" | "picker" | "narrator" | "rate";
 
 function App() {
   const [screen, setScreen] = useState<Screen>("home");
@@ -31,6 +32,20 @@ function App() {
       markStoryUsed(activeStory.id);
       setUsedIds(getUsedStoryIds());
     }
+    setScreen("rate");
+  }
+
+  function handleBackFromNarrator() {
+    setScreen("picker");
+  }
+
+  function handleRatingSubmit(rating: number) {
+    if (activeStory) submitRating(activeStory.id, rating);
+    setActiveStory(null);
+    setScreen("picker");
+  }
+
+  function handleRatingSkip() {
     setActiveStory(null);
     setScreen("picker");
   }
@@ -62,7 +77,11 @@ function App() {
       )}
 
       {screen === "narrator" && activeStory && (
-        <NarratorView story={activeStory} onFinish={handleFinishStory} />
+        <NarratorView story={activeStory} onFinish={handleFinishStory} onBack={handleBackFromNarrator} />
+      )}
+
+      {screen === "rate" && activeStory && (
+        <RateStory story={activeStory} onSubmit={handleRatingSubmit} onSkip={handleRatingSkip} />
       )}
     </div>
   );

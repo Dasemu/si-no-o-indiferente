@@ -6,7 +6,6 @@ export interface Story {
   difficulty: Difficulty;
   tags: string[];
   teaser: string;
-  hints: string[];
   solution: string;
 }
 

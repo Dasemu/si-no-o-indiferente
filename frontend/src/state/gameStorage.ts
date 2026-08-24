@@ -15,7 +15,7 @@ export function markStoryUsed(id: string): void {
   try {
     localStorage.setItem(USED_KEY, JSON.stringify([...used]));
   } catch {
-    // ignorar si localStorage no esta disponible
+    // Ignore if localStorage is unavailable.
   }
 }
 
@@ -23,6 +23,6 @@ export function resetUsedStories(): void {
   try {
     localStorage.removeItem(USED_KEY);
   } catch {
-    // ignorar
+    // Ignore.
   }
 }

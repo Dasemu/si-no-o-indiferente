@@ -36,7 +36,7 @@ export default function StoryPicker({ stories, usedIds, onPick, onBack }: StoryP
         <button className="ghost" onClick={onBack}>
           ← Volver
         </button>
-        <h2>Elegí una historia</h2>
+        <h2>Elige una historia</h2>
       </header>
 
       <div className="picker-controls">
@@ -74,7 +74,7 @@ export default function StoryPicker({ stories, usedIds, onPick, onBack }: StoryP
         ))}
       </ul>
 
-      {visible.length === 0 && <p className="empty">No quedan historias sin jugar. Reiniciá desde el inicio.</p>}
+      {visible.length === 0 && <p className="empty">No quedan historias sin jugar. Reinicia desde el inicio.</p>}
     </section>
   );
 }

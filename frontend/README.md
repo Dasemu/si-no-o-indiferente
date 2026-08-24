@@ -1,34 +1,34 @@
-# Frontend — Historias Incompletas
+# Frontend — Sí, no, o indiferente
 
-App React + Vite. Se empaqueta como sitio web y, con Capacitor, como APK
-Android.
+React + Vite app. Packaged as a website and, with Capacitor, as an Android
+APK.
 
-## Desarrollo
+## Development
 
 ```bash
 npm install
-cp .env.example .env   # VITE_API_URL apuntando a tu backend
+cp .env.example .env   # VITE_API_URL pointing to your backend
 npm run dev
 ```
 
-## Build web
+## Web build
 
 ```bash
-npm run build   # genera dist/
+npm run build   # generates dist/
 ```
 
 ## APK (Capacitor)
 
-Ver instrucciones completas en el [README raíz](../README.md#frontend-apk-con-capacitor).
-Resumen: `npm run cap:sync` (build + `cap sync android`) y después
-`npm run android:open` o `cd android && ./gradlew assembleDebug` con Android
-SDK/JDK instalados.
+See the full instructions in the
+[root README](../README.md#frontend-apk-with-capacitor).
+Summary: `npm run cap:sync` (build + `cap sync android`) and then
+`npm run android:open`, or `cd android && ./gradlew assembleDebug` with the
+Android SDK/JDK installed.
 
-## Estructura relevante
+## Relevant structure
 
-- `src/api.ts` — obtiene el mazo de historias del backend, con fallback a
-  cache local y al set default embebido.
-- `src/data/defaultStories.json` — historias por defecto (contenido
-  original).
-- `src/screens/` — Home, selector de historia y vista del narrador.
-- `capacitor.config.ts` — config de la app nativa.
+- `src/api.ts` — fetches the story deck from the backend, with fallback to
+  the local cache and the embedded default set.
+- `src/data/defaultStories.json` — default stories (original content).
+- `src/screens/` — Home, story picker, and narrator view.
+- `capacitor.config.ts` — native app config.
