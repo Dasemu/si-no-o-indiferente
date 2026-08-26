@@ -44,6 +44,19 @@ Genera exactamente ${count} historias completamente ORIGINALES en español (no c
 
 Las historias deben ser aptas para todo público (sin violencia gráfica extrema, sin contenido sexual), pueden ser misteriosas, agridulces o con un giro emotivo, pero siempre con una explicación lógica y satisfactoria. ${avoidList}
 
+Reglas de coherencia y verosimilitud (muy importantes, la calidad depende de esto):
+- El teaser debe ser literalmente cierto, aunque esté redactado para inducir a un malentendido. Nunca describas como un hecho algo que no ocurrió de verdad: por ejemplo, si el personaje en realidad oyó un zumbido de avispas, no escribas "escuchó una voz que le advirtió"; escribe algo objetivamente exacto como "escuchó un sonido que interpretó como una advertencia". La sorpresa debe venir de la interpretación errónea del lector, nunca de una frase falsa en el teaser.
+- Cada detalle extraño mencionado en el teaser debe tener una razón de ser explicada en la solution. No dejes cabos sueltos ni elementos decorativos que no se resuelvan.
+- La solution no puede depender de datos, casualidades o personajes que no se puedan deducir razonablemente a partir de preguntas de sí/no. Nada de giros de última hora que introduzcan información imposible de anticipar.
+- Evita explicaciones sobrenaturales, mágicas o de ciencia ficción, salvo que el propio teaser deje claro desde el principio que la historia pertenece a ese género.
+- La relación entre el misterio planteado y su explicación debe ser directa y verificable: un jugador que haga las preguntas adecuadas debe poder llegar a la solución paso a paso, sin necesidad de adivinar un detalle arbitrario.
+- Antes de dar tu respuesta final, revisa mentalmente cada historia: ¿resuelve la solution TODO lo planteado en el teaser? ¿Es una explicación realista y satisfactoria, sin lagunas ni contradicciones? Descarta y reescribe cualquier historia que no cumpla esto.
+- Dedica el mismo nivel de cuidado y rigor a todas las historias, incluidas las últimas del lote; no reduzcas la calidad por generar varias a la vez.
+
+Ejemplo del nivel de coherencia esperado (no lo reutilices, es solo referencia de estilo):
+teaser: "Cada mañana, un anciano que vivía solo pintaba la puerta de su casa de un color distinto. Un día, los vecinos se dieron cuenta de que la puerta llevaba una semana sin cambiar de color y llamaron a una ambulancia. El anciano estaba perfectamente bien."
+solution: "El anciano padecía una afección que podía provocarle una caída repentina sin previo aviso. Su hija, que vivía lejos y no podía visitarlo a diario, había acordado con él una señal sencilla para los vecinos: mientras la puerta cambiara de color cada día, significaba que se había levantado y encontraba bien. Si pasaban varios días sin cambio, era la señal de que algo podía ir mal y debían comprobarlo. Esa semana se le había acabado la pintura y, al no conducir, no había podido reponerla; no avisó a nadie porque no imaginó que tardaría tanto en salir a comprar más. La señal cumplió su función aunque esta vez fuera una falsa alarma: los vecinos actuaron exactamente como se había previsto."
+
 Importante sobre el idioma: todo el texto de cada historia (title, teaser, solution y tags) debe estar escrito en castellano de España (español peninsular), con su vocabulario, expresiones y gramática característicos (por ejemplo "vosotros", "coger", "ordenador"). No uses español latinoamericano ni ninguna otra variante regional del español.
 
 Devuelve únicamente el JSON que respeta el schema indicado.`;
@@ -68,7 +81,7 @@ export async function generateStoriesWithGemini(
     generationConfig: {
       responseMimeType: "application/json",
       responseSchema: RESPONSE_SCHEMA,
-      temperature: 1,
+      temperature: 0.85,
     },
   };
 
